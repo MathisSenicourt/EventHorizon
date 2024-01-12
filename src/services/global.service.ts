@@ -16,6 +16,10 @@ export class GlobalService {
     return this.http.post<any>('http://localhost:3000/global/checkUserWithPassword', userData);
   }
 
+  getUserById(userId: number) {
+    return this.http.get<any>('http://localhost:3000/global/getUserById/' + userId);
+  }
+
   getAllEvents() {
     return this.http.get<any[]>('http://localhost:3000/global/getAllEvents');
   }
