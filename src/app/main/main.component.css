@@ -9,6 +9,7 @@
     background-size: cover;
     position: relative;
     border: 2px solid #ccc; /* Add a border to the card */
+    cursor: pointer;
   }
   
   .event-card h2 {
