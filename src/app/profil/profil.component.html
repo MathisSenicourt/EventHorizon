@@ -6,7 +6,7 @@
       <div class="profile-card">
         <h2 class="section-title" >Profil</h2>
         <img [src]="users[0].imageUrl" alt="User Avatar" class="avatar">
-        <h3 style="color: black;">{{ users[0].firstName }} {{ users[0].lastName }}</h3>
+        <h3 style="color: black;">{{ this.userBack.user.Name }}</h3>
       </div>
       <br>
       <div class="profile-card" style="text-align: left;">
@@ -15,22 +15,22 @@
         <div>
           <span style="color: black;">Nom prénom </span>
           <br>
-          <span style="color: black; font-weight: bold;">{{ users[0].firstName }} {{ users[0].lastName }}</span>
+          <span style="color: black; font-weight: bold;">{{ this.userBack.user.Name }} {{ this.userBack.user.Surname }}</span>
         </div>
         <div class="separator-line-2"></div>
         <div>
           <span style="color: black;">Email </span>
           <br>
-          <span style="color: black; font-weight: bold;">{{ users[0].email }}</span>
+          <span style="color: black; font-weight: bold;">{{ this.userBack.user.Mail }}</span>
         </div>
         <div class="separator-line-2"></div>
         <div>
           <span style="color: black;">Evenements participées : </span>
           <br>
           <ul style="color: black;">
-          @for (event of events; track event.name) {
+          @for (event of eventsUserBack; track event.Name) {
             <li style="color: black;">
-              <span style="color: black; font-weight: bold;">{{ event.name }}</span>
+              <span style="color: black; font-weight: bold;">{{ event.Name }}</span>
             </li>
           }
           </ul>
