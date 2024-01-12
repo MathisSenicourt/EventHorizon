@@ -24,7 +24,8 @@ export class LoginComponent {
     this.globalService.checkUserWithPassword(this.loginData).subscribe(
       (response) => {
         if (response.success) {
-          console.log('Connexion réussie:', response);
+          console.log('Connexion réussie:', response.user[0].ID);
+          sessionStorage.setItem('userId', response.user[0].ID.toString());
           this.router.navigate(['/main']);
         } else {
           console.error('Nom d\'utilisateur ou mot de passe incorrect:', response.message);

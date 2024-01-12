@@ -30,7 +30,7 @@ export class RegisterComponent {
       (response) => {
         if (response.success) {
           console.log('Utilisateur créé avec succès:', response);
-          this.router.navigate(['/main']);
+          this.router.navigate(['/login']);
         } else {
           console.error('Erreur lors de la création de l\'utilisateur:', response.message);
         }
