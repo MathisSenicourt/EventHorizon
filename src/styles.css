@@ -56,20 +56,25 @@ body {
 
 .tab-container {
   display: flex;
-  width: 100%;
+  justify-content: space-around;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .other-btn, .main-btn {
   background-color: #fff;
   color: #000;
-  padding: 10px 20px;
+  padding: 10px 10px;
   margin-left: 2px;
   margin-right: 2px;
   border: none;
-  border-radius: 5px;
+  border-radius: 100%; 
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .main-btn:hover, .other-btn:hover {
@@ -80,4 +85,8 @@ body {
 .main-btn {
   background-color: #fd0e42;
   color: white;
+}
+.image-onglet{
+  width: 15px;
+  height: auto;
 }

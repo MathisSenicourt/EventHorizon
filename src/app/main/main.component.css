@@ -104,13 +104,11 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Change box shadow on hover */
   }
   
-  /* Add arrow icons to the buttons */
-  .button-container-small button:first-child::before {
-    content: '\2190'; /* Unicode arrow left character */
+  .image-onglet-like-dislike{
+    width: 17px;
+    height: auto;
+    margin-top: 5px;
   }
-  
-  .button-container-small button:last-child::before {
-    content: '\2192'; /* Unicode arrow right character */
-  }
+
   
   

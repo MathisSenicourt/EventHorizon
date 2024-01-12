@@ -23,6 +23,15 @@ export class MainComponent {
     this.router.navigate(['/message']);
   }
 
+  navigateToEventDetails() {
+    const currentEvent = this.getCurrentEvent();
+    
+    if (currentEvent) {
+      const eventId = currentEvent.id;
+        this.router.navigate(['/event-details', eventId]);
+    }
+  }
+
   getCurrentEvent() {
     return this.events[this.currentIndex];
   }
