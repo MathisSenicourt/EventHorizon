@@ -13,7 +13,7 @@ import { GlobalService } from '../../services/global.service';
 export class ProfilComponent {
   userBack: any = { events: [] };
   eventsUserBack: any = { events: [] };
-  id_user = 2;
+  id_user: string | null = "1"
   users = eventsDataUser;
   events = eventsData;
 
@@ -22,6 +22,7 @@ export class ProfilComponent {
     ) {}
 
   ngOnInit() {
+    this.id_user = sessionStorage.getItem("userId");
     this.globalService.getUserById(this.id_user)
       .subscribe((data:any[]) => {
         this.userBack = data;

@@ -16,7 +16,7 @@ export class GlobalService {
     return this.http.post<any>('http://localhost:3000/global/checkUserWithPassword', userData);
   }
 
-  getUserById(userId: number) {
+  getUserById(userId: string | null) {
     return this.http.get<any>('http://localhost:3000/global/getUserById/' + userId);
   }
 
@@ -24,7 +24,7 @@ export class GlobalService {
     return this.http.get<any[]>('http://localhost:3000/global/getAllEvents');
   }
 
-  getEventsByUserId(userId: number) {
+  getEventsByUserId(userId: string | null) {
     return this.http.get<any[]>('http://localhost:3000/global/getEventsByUserId/' + userId);
   }
 
