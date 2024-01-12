@@ -1,0 +1,28 @@
+<div class="connexion-container">
+    <!-- Partie gauche (formulaire de connexion) -->
+    <div class="form-container">
+      <h2>Connexion</h2>
+
+      <div class="separator-line"></div>
+
+      <form class="form">
+        <label for="login">Login:</label>
+        <input type="text" id="login" name="login" required>
+  
+        <label for="mdp">Mot de passe:</label>
+        <input type="password" id="mdp" name="mdp" required>
+  
+        <button type="submit">Se connecter</button>
+      </form>
+      <p class="register-link">Pas encore inscrit? <a href="/register">Inscrivez-vous ici</a></p>
+
+      <button (click)="navigateToTabs()">Aller vers les onglets</button>
+
+    </div>
+  
+    <!-- Partie droite (fond rouge) -->
+    <div class="background-container">
+        <p class="right-content">Event Horizon</p>
+    </div>
+  </div>
+  

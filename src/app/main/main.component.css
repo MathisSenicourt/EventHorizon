@@ -1,0 +1,116 @@
+/* my-component.component.css */
+.event-card {
+    width: 300px;
+    height: 400px; /* Adjust the height as needed */
+    margin: 20px auto; /* Center the card horizontally */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    background-size: cover;
+    position: relative;
+    border: 2px solid #ccc; /* Add a border to the card */
+  }
+  
+  .event-card h2 {
+    font-size: 24px;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .event-details {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .event-details p {
+    margin: 5px 0;
+  }
+  
+  .event-card img {
+    width: 100%; /* Make the image fill the entire card */
+    height: 100%; /* Make the image fill the entire card */
+    object-fit: cover; /* Preserve aspect ratio while covering the card */
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8px; /* Add border-radius to the image */
+  }
+
+  /* my-component.component.css */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+  }
+  
+  .button-container button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 10px; /* Add space between buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add box shadow */
+    margin-left: 10px; 
+  }
+  
+  .button-container button:hover {
+    background-color: #fd0e42;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Change box shadow on hover */
+  }
+  
+  /* Add arrow icons to the buttons */
+  .button-container button:first-child::before {
+    content: '\2190'; /* Unicode arrow left character */
+  }
+  
+  .button-container button:last-child::before {
+    content: '\2192'; /* Unicode arrow right character */
+  }
+
+  /* my-component.component.css */
+  .button-container-small {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+  }
+  
+  .button-container-small button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 10px; /* Add space between buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add box shadow */
+    margin-left: 10px; 
+  }
+  
+  .button-container-small button:hover {
+    background-color: #fd0e42;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Change box shadow on hover */
+  }
+  
+  /* Add arrow icons to the buttons */
+  .button-container-small button:first-child::before {
+    content: '\2190'; /* Unicode arrow left character */
+  }
+  
+  .button-container-small button:last-child::before {
+    content: '\2192'; /* Unicode arrow right character */
+  }
+  
+  

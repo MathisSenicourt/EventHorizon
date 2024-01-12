@@ -1,0 +1,80 @@
+.inscription-container {
+  display: flex;
+  height: 100vh;
+}
+
+.form-container {
+  flex: 1; 
+  padding: 20px;
+}
+
+.background-container {
+  flex: 1; 
+  background-color: #fd0e42; 
+  color: #fff; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.form-container label {
+  color: #fd0e42; 
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.form-container input:hover {
+  border-color: #fd0e42; 
+}
+
+.form-container h2 {
+  color: #fd0e42; 
+  text-align: center;
+}
+
+.form-container button {
+width: 100%; 
+padding: 10px;
+background-color: #fd0e42; 
+color: #fff; 
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+  background-color: #fd0e42; 
+}
+  
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+}
+  
+.form-container a {
+  color: #fd0e42; 
+  font-style: italic;
+}
+
+.right-content {
+  font-size: 5em;
+  font-weight: bold; 
+  color: #fff; 
+  text-align: center; 
+  margin: 0; 
+  padding: 20px; 
+}
+  

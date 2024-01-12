@@ -1,0 +1,93 @@
+/* Connexion Component Styles */
+
+/* Style général pour le conteneur de la page de connexion */
+.connexion-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Style pour la partie gauche (formulaire de connexion) */
+  .form-container {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Style pour la partie droite (fond rouge) */
+  .background-container {
+    flex: 1;
+    background-color: #fd0e42;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Style pour le formulaire de connexion */
+  .form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Style spécifique pour les labels */
+  .form-container label {
+    color: #fd0e42;
+  }
+  
+  /* Style spécifique pour les champs de formulaire */
+  .form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+  }
+  
+  /* Changement de style au survol */
+  .form-container input:hover {
+    border-color: #fd0e42;
+  }
+  
+  /* Style spécifique pour le bouton de connexion */
+  .form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fd0e42;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Changement de style au survol du bouton */
+  .form-container button:hover {
+    background-color: #fd0e42;
+  }
+  
+  
+/* Style pour centrer le lien cliquable */
+.register-link {
+    text-align: center;
+    margin-top: 20px; /* Espacement au-dessus du lien */
+  }
+  
+  /* Style spécifique pour le lien en italique */
+  .form-container a {
+    color: #fd0e42; /* Rouge */
+    font-style: italic;
+  }
+  
+  .form-container h2 {
+    color: #fd0e42; /* Rouge */
+    text-align: center;
+  }
+
+  .right-content {
+    font-size: 5em; /* Taille du texte en gros */
+    font-weight: bold; /* Texte en gras */
+    color: #fff; /* Texte blanc */
+    text-align: center; /* Centrage horizontal */
+    margin: 0; /* Supprime la marge par défaut du paragraphe */
+    padding: 20px; /* Espacement intérieur */
+  }

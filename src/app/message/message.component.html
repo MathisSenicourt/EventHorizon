@@ -1,0 +1,37 @@
+<div class="container-wrapper">
+  <div class="left-container"></div>
+  <div class="main-container-all">
+
+    <div class="content-container">
+      <h2 class="section-title">Personnes dans le même événement</h2>
+
+      <div class="users-container">
+        
+        @for (user of users; track user.firstName) {
+          <div style="display: block; margin-left: 5px;margin-right: 5px;">
+            <img [src]="user.imageUrl" alt="User Avatar" class="avatar">
+            <p style="color: #000; text-align: center;">{{ user.firstName }}</p>
+          </div>
+          
+        } @empty {
+          Empty list of users
+        }
+          
+        
+      </div>
+
+      <h2 class="section-title">Messages</h2>
+      <!-- Add your message-related content here -->
+    </div>
+
+      <div class="tab-container">
+        <button class="other-btn" (click)="navigateToMain()">Main</button>
+        <button class="main-btn">Message</button>
+        <button class="other-btn" (click)="navigateToProfil()">Profil</button>
+      </div>
+  </div>
+  <div class="right-container"></div>
+</div>
+
+  
+
