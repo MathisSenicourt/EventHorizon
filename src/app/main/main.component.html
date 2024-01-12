@@ -3,7 +3,7 @@
     <div class="main-container-all">
         <div class="rectangle"></div>
         <h2 class="main-title">Discover</h2>
-            <div class="event-card" [style.background-image]="'url(' + getCurrentEvent().imageUrl + ')'">
+            <div class="event-card" [style.background-image]="'url(' + getCurrentEvent().imageUrl + ')'" (click)="navigateToEventDetails()">
                 <h2>{{ getCurrentEvent().name }}</h2>
                 <div class="event-details">
                     <p>Place: {{ getCurrentEvent().place }}</p>

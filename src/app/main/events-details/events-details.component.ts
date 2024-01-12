@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { eventsData } from '../event-data';
+import { eventsData } from '../../event-data';
 
 @Component({
-  selector: 'app-main',
+  selector: 'app-events-details',
   standalone: true,
   imports: [],
-  templateUrl: './main.component.html',
-  styleUrl: './main.component.css'
+  templateUrl: './events-details.component.html',
+  styleUrl: './events-details.component.css'
 })
-export class MainComponent {
+export class EventsDetailsComponent {
   events = eventsData;
   currentIndex = 0;
   showDetails = false;
@@ -34,17 +34,4 @@ export class MainComponent {
   getCurrentEvent() {
     return this.events[this.currentIndex];
   }
-
-  showNextEvent() {
-    if (this.currentIndex < this.events.length - 1) {
-      this.currentIndex++;
-    }
-  }
-
-  showPreviousEvent() {
-    if (this.currentIndex > 0) {
-      this.currentIndex--;
-    }
-  }
-
 }
