@@ -3,32 +3,26 @@
     <div class="main-container-all">
         <div class="rectangle" style="bottom: calc(100% / 1.1)"></div>
         <h2 class="main-title">Discover</h2>
-        <div class="event-card-petit" [style.background-image]="'url(' + currentEvent.imageUrl + ')'">
-            <h2>{{ currentEvent.name }}</h2>
-            <div class="event-details">
-                <p>Place: {{ currentEvent.place }}</p>
-                <p>Date: {{ currentEvent.date }}</p>
-            </div>
-        </div>
+        <div class="event-card-petit" [style.background-image]="'url(' + this.eventsBack.URL + ')'"></div>
         <div class="profile-card" style="text-align: left;">
             <h2 class="section-title">À propos</h2>
             <div class="separator-line-2"></div>
             <div>
               <span style="color: black;">Nom </span>
               <br>
-              <span style="color: black; font-weight: bold;">{{ currentEvent.name }}</span>
+              <span style="color: black; font-weight: bold;">{{ this.eventsBack.Name }}</span>
             </div>
             <div class="separator-line-2"></div>
             <div>
               <span style="color: black;">Lieu </span>
               <br>
-              <span style="color: black; font-weight: bold;">{{ currentEvent.place }}</span>
+              <span style="color: black; font-weight: bold;">{{ this.eventsBack.Place }}</span>
             </div>
             <div class="separator-line-2"></div>
             <div>
                 <span style="color: black;">Date </span>
                 <br>
-                <span style="color: black; font-weight: bold;">{{ currentEvent.date }}</span>
+                <span style="color: black; font-weight: bold;">{{ this.eventsBack.Date }}</span>
             </div>
             <div class="separator-line-2"></div>
             <div>

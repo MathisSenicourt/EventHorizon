@@ -43,7 +43,7 @@ export class MainComponent {
 
     if (currentEvent) {
       const eventId = currentEvent.ID;
-        this.router.navigate(['/eventsDetails', eventId]);
+        this.router.navigate(['/eventsDetails', this.currentIndex]);
     }
   }
 
