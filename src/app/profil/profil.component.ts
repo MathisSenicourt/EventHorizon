@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { eventsDataUser } from '../event-data';
+import { eventsData, eventsDataUser } from '../event-data';
 
 @Component({
   selector: 'app-profil',
@@ -11,6 +11,7 @@ import { eventsDataUser } from '../event-data';
 })
 export class ProfilComponent {
   users = eventsDataUser;
+  events = eventsData;
 
   constructor(private router: Router) {}
 

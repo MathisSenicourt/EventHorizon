@@ -24,12 +24,27 @@
           <span style="color: black; font-weight: bold;">{{ users[0].email }}</span>
         </div>
         <div class="separator-line-2"></div>
+        <div>
+          <span style="color: black;">Evenements participées : </span>
+          <br>
+          <ul style="color: black;">
+          @for (event of events; track event.name) {
+            <li style="color: black;">
+              <span style="color: black; font-weight: bold;">{{ event.name }}</span>
+            </li>
+          }
+          </ul>
+        </div>
+        <div class="separator-line-2"></div>
+        <div>
+          <span style="color: black;">Amis : </span>
+        </div>
       </div>
     </div>
       <div class="tab-container">
-        <button class="other-btn" (click)="navigateToMain()">Main</button>
-        <button class="other-btn" (click)="navigateToMessage()">Message</button>
-        <button class="main-btn" >Profil</button>
+        <button class="other-btn" (click)="navigateToMain()"><img src="./../../assets/globe.png"alt="www"class="image-onglet" /></button>
+        <button class="other-btn" (click)="navigateToMessage()"><img src="./../../assets/message.png"alt="message" class="image-onglet"/></button>
+        <button class="main-btn" ><img src="./../../assets/utilisateur.png"alt="user"class="image-onglet" /></button>
       </div>
   </div>
   <div class="right-container"></div>
