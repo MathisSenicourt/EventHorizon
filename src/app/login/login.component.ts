@@ -1,18 +1,38 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { GlobalService } from '../../services/global.service';
+import {FormsModule} from "@angular/forms"; // Assurez-vous d'importer correctement le service
 
 @Component({
   selector: 'app-login',
-  standalone: true,
-  imports: [],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  standalone: true,
+  imports: [
+    FormsModule
+  ],
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  loginData = {
+    Mail: '',
+    Password: ''
+  };
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private globalService: GlobalService) {}
 
-  navigateToTabs(): void {
-    this.router.navigate(['/main']);
+  login(): void {
+    this.globalService.checkUserWithPassword(this.loginData).subscribe(
+      (response) => {
+        if (response.success) {
+          console.log('Connexion réussie:', response);
+          this.router.navigate(['/main']);
+        } else {
+          console.error('Nom d\'utilisateur ou mot de passe incorrect:', response.message);
+        }
+      },
+      (error) => {
+        console.error('Erreur lors de la connexion:', error);
+      }
+    );
   }
 }

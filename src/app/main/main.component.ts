@@ -21,7 +21,7 @@ export class MainComponent {
   ) {}
 
   ngOnInit() {
-    this.globalService.getAllEvent()
+    this.globalService.getAllEvents()
       .subscribe((data:any[]) => {
         this.eventsBack = data;
       });
@@ -40,7 +40,7 @@ export class MainComponent {
 
   navigateToEventDetails() {
     const currentEvent = this.getCurrentEvent();
-    
+
     if (currentEvent) {
       const eventId = currentEvent.id;
         this.router.navigate(['/event-details', eventId]);
