@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { eventsData } from '../event-data';
+import {GlobalService} from "../../services/global.service";
 
 @Component({
   selector: 'app-main',
@@ -10,10 +11,25 @@ import { eventsData } from '../event-data';
   styleUrl: './main.component.css'
 })
 export class MainComponent {
+  eventsBack: any = { events: [] };
   events = eventsData;
   currentIndex = 0;
   showDetails = false;
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private globalService: GlobalService
+  ) {}
+
+  ngOnInit() {
+    this.globalService.getAllEvent()
+      .subscribe((data:any[]) => {
+        this.eventsBack = data;
+      });
+  }
+
+  toto(){
+    console.log(this.eventsBack)
+  }
 
   navigateToProfil(): void {
     this.router.navigate(['/profil']);

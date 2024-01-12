@@ -3,6 +3,8 @@
     <div class="main-container-all">
         <div class="rectangle"></div>
         <h2 class="main-title">Discover</h2>
+
+      <span>{{toto()}}</span>
             <div class="event-card" [style.background-image]="'url(' + getCurrentEvent().imageUrl + ')'">
                 <h2>{{ getCurrentEvent().name }}</h2>
                 <div class="event-details">
@@ -10,12 +12,12 @@
                     <p>Date: {{ getCurrentEvent().date }}</p>
                 </div>
             </div>
-            
+
             <div class="button-container-small">
                 <button (click)="showPreviousEvent()"></button>
                 <button (click)="showNextEvent()"></button>
             </div>
-            
+
         <div class="tab-container">
             <button class="main-btn" >Main</button>
             <button class="other-btn" (click)="navigateToMessage()">Message</button>
