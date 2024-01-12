@@ -48,7 +48,7 @@ export class MainComponent {
   }
 
   getCurrentEvent() {
-    return this.events[this.currentIndex];
+    return this.eventsBack[this.currentIndex];
   }
 
   showNextEvent() {

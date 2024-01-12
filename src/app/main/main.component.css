@@ -11,25 +11,25 @@
     border: 2px solid #ccc; /* Add a border to the card */
     cursor: pointer;
   }
-  
+
   .event-card h2 {
     font-size: 24px;
     color: #fff;
     margin: 0;
     text-align: center;
   }
-  
+
   .event-details {
     font-size: 14px;
     color: #fff;
     text-align: center;
     margin-top: 10px;
   }
-  
+
   .event-details p {
     margin: 5px 0;
   }
-  
+
   .event-card img {
     width: 100%; /* Make the image fill the entire card */
     height: 100%; /* Make the image fill the entire card */
@@ -45,9 +45,9 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-    
+
   }
-  
+
   .button-container button {
     width: 50px;
     height: 50px;
@@ -60,19 +60,19 @@
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     margin-right: 10px; /* Add space between buttons */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add box shadow */
-    margin-left: 10px; 
+    margin-left: 10px;
   }
-  
+
   .button-container button:hover {
     background-color: #fd0e42;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Change box shadow on hover */
   }
-  
+
   /* Add arrow icons to the buttons */
   .button-container button:first-child::before {
     content: '\2190'; /* Unicode arrow left character */
   }
-  
+
   .button-container button:last-child::before {
     content: '\2192'; /* Unicode arrow right character */
   }
@@ -82,9 +82,9 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-    
+
   }
-  
+
   .button-container-small button {
     width: 35px;
     height: 35px;
@@ -97,19 +97,23 @@
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     margin-right: 10px; /* Add space between buttons */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add box shadow */
-    margin-left: 10px; 
+    margin-left: 10px;
   }
-  
+
   .button-container-small button:hover {
     background-color: #fd0e42;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Change box shadow on hover */
   }
-  
+
   .image-onglet-like-dislike{
     width: 17px;
     height: auto;
     margin-top: 5px;
   }
 
-  
-  
+.event-details p{
+  background-color: #fd0e42;
+  padding: 5px 10px;
+}
+
+

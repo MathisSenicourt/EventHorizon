@@ -3,11 +3,11 @@
     <div class="main-container-all">
         <div class="rectangle"></div>
         <h2 class="main-title">Discover</h2>
-            <div class="event-card" [style.background-image]="'url(' + getCurrentEvent().imageUrl + ')'" (click)="navigateToEventDetails()">
-                <h2>{{ getCurrentEvent().name }}</h2>
+            <div class="event-card" [style.background-image]="'url(' + getCurrentEvent().URL + ')'" (click)="navigateToEventDetails()">
+                <h2>{{ getCurrentEvent().Name }}</h2>
                 <div class="event-details">
-                    <p>Place: {{ getCurrentEvent().place }}</p>
-                    <p>Date: {{ getCurrentEvent().date }}</p>
+                    <p>Place: {{ getCurrentEvent().Place }}</p>
+                    <p>Date: {{ getCurrentEvent().Date }}</p>
                 </div>
             </div>
 
