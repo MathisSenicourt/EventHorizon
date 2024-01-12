@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { eventsData } from '../../event-data';
 
 @Component({
@@ -11,27 +11,26 @@ import { eventsData } from '../../event-data';
 })
 export class EventsDetailsComponent {
   events = eventsData;
-  currentIndex = 0;
+  currentEvent: any;
   showDetails = false;
-  constructor(private router: Router) {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
+  ngOnInit() {
+    this.route.params.subscribe(params => {
+      const eventId = +params['id']; // Convertissez le paramètre en nombre
+
+      // Recherchez l'événement correspondant dans votre tableau d'événements
+      this.currentEvent = this.events.find(event => event.id === eventId);
+    });
+  }
   navigateToProfil(): void {
     this.router.navigate(['/profil']);
   }
   navigateToMessage(): void {
     this.router.navigate(['/message']);
   }
-
-  navigateToEventDetails() {
-    const currentEvent = this.getCurrentEvent();
-    
-    if (currentEvent) {
-      const eventId = currentEvent.id;
-        this.router.navigate(['/event-details', eventId]);
-    }
+  navigateToMain(): void {
+    this.router.navigate(['/main']);
   }
 
-  getCurrentEvent() {
-    return this.events[this.currentIndex];
-  }
 }

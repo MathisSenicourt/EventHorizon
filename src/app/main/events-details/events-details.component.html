@@ -1,11 +1,42 @@
 <div class="container-wrapper">
     <div class="left-container"></div>
     <div class="main-container-all">
-        <div class="rectangle-petit"></div>
+        <div class="rectangle" style="bottom: calc(100% / 1.1)"></div>
         <h2 class="main-title">Discover</h2>
-                    
+        <div class="event-card-petit" [style.background-image]="'url(' + currentEvent.imageUrl + ')'">
+            <h2>{{ currentEvent.name }}</h2>
+            <div class="event-details">
+                <p>Place: {{ currentEvent.place }}</p>
+                <p>Date: {{ currentEvent.date }}</p>
+            </div>
+        </div>
+        <div class="profile-card" style="text-align: left;">
+            <h2 class="section-title">À propos</h2>
+            <div class="separator-line-2"></div>
+            <div>
+              <span style="color: black;">Nom </span>
+              <br>
+              <span style="color: black; font-weight: bold;">{{ currentEvent.name }}</span>
+            </div>
+            <div class="separator-line-2"></div>
+            <div>
+              <span style="color: black;">Lieu </span>
+              <br>
+              <span style="color: black; font-weight: bold;">{{ currentEvent.place }}</span>
+            </div>
+            <div class="separator-line-2"></div>
+            <div>
+                <span style="color: black;">Date </span>
+                <br>
+                <span style="color: black; font-weight: bold;">{{ currentEvent.date }}</span>
+            </div>
+            <div class="separator-line-2"></div>
+            <div>
+                <span style="color: black;">Personnes inscrites : </span>
+            </div>
+        </div>
         <div class="tab-container">
-            <button class="main-btn" ><img src="./../../assets/globe.png"alt="www"  class="image-onglet"/></button>
+            <button class="main-btn" (click)="navigateToMain()" ><img src="./../../assets/globe.png"alt="www"  class="image-onglet"/></button>
             <button class="other-btn" (click)="navigateToMessage()"><img src="./../../assets/message.png"alt="message"class="image-onglet" /></button>
             <button class="other-btn" (click)="navigateToProfil()"><img src="./../../assets/utilisateur.png"alt="user"class="image-onglet" /></button>
         </div>

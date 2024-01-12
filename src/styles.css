@@ -31,6 +31,19 @@ body {
   margin-right:  30%;
 }
 
+.rectangle-petit{
+  position: absolute;
+  top: 0;
+  bottom: calc(100% / 0.75);
+  left: 0;
+  right: 0;
+  background-color: #fd0e42;
+  border-radius: 0 0 15px 15px; 
+  z-index: -1; 
+  margin-left: 30%;
+  margin-right:  30%;
+}
+
 .container-wrapper {
   display: flex;
   height: 100%;
